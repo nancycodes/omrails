@@ -4,6 +4,7 @@ class PinsController < ApplicationController
 
   # GET /pins
   # GET /pins.json
+
   def index
     @pins = Pin.all
 
@@ -37,7 +38,7 @@ class PinsController < ApplicationController
 
   # GET /pins/1/edit
   def edit
-    @pin = current_user.pins.new.find(params[:id])
+    @pin = current_user.pins.find(params[:id])
   end
 
   # POST /pins
@@ -59,7 +60,7 @@ class PinsController < ApplicationController
   # PUT /pins/1
   # PUT /pins/1.json
   def update
-    @pin = current_user.pins.new.find(params[:id])
+    @pin = current_user.pins.find(params[:id])
 
     respond_to do |format|
       if @pin.update_attributes(params[:pin])
@@ -75,7 +76,7 @@ class PinsController < ApplicationController
   # DELETE /pins/1
   # DELETE /pins/1.json
   def destroy
-    @pin = current_user.pins.new.find(params[:id])
+    @pin = current_user.pins.find(params[:id])
     @pin.destroy
 
     respond_to do |format|
