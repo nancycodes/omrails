@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.11'
 gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
+gem 'faker', '1.1.2'
 
 
 # Bundle edge Rails instead:
